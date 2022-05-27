@@ -1,33 +1,16 @@
 # S1.01Nivell2
 
-Tasca S1.02. Exceptions
+Tasca S1.01. Herència i Polimorfisme
 
 Nivell 2
+
 - Exercici 1
-Crea una classe anomenada "Entrada". Aquesta classe ha de servir per controlar les diferents excepcions que poden aparèixer en Java a l’hora d’introduir dades per teclat utilitzant la classe Scanner.
+Crea una classe anomenada "Telèfon" amb els atributs marca i model, i el mètode trucar(). Aquest mètode ha de rebre un String amb un número de telèfon. El mètode ha de mostrar per consola un missatge dient que s’està trucant al número rebut per paràmetre. 
 
-El primer que s’ha de fer és instanciar un objecte de la classe Scanner i a partir d’aquí, crear mètodes estàtics per llegir els diferents tipus de dades des del teclat. 
+Crea una interfície anomenada "Camera" amb el mètode fotografiar(), i una altra interfície anomenada Rellotge amb el mètode alarma().
 
- Important
+Crea una classe anomenada "Smartphone" que sigui subclasse de "Telèfon" i que a la vegada implementi les interfícies "Camera" i "Rellotge".
 
-És important que si en algun mètode salta una excepció, la tractem i tornem a demanar la dada a l’usuari/ària fins que aquesta estigui ben introduïda. Per exemple: Si introdueix un float amb un punt en lloc d'amb una coma, ha de mostrar “Error de format”. Fins que l’usuari/ària no introdueix un float ben format ha de seguir demanant la dada.
+El mètode fotografiar() ha de mostrar per consola: “S’està fent una foto” i el mètode alarma() ha de mostrar: “Està sonant l’alarma”.
 
-Tots els mètodes reben un String amb el missatge que es vol mostrar a l’usuari/ària, per exemple: “Introdueix la teva edat”, i retornen la dada oportuna introduïda per l’usuari/ària en cada mètode, per exemple: un byte amb l’edat de l’usuari/ària.
-
-Mètodes a implantar capturant l’excepció de la classe InputMismatchException:
-
-public static byte llegirByte(String missatge);
-
-public static int llegirInt(String missatge);
-
-public static float llegirFloat(String missatge);
-
-public static double llegirDouble(String missatge);
-
-Mètodes a implantar capturant l’excepció de la classe Exception:
-
-public static char llegirChar(String missatge);
-
-public static String llegirString(String missatge);
-
-public static boolean llegirSiNo(String missatge), si l’usuari/ària introdueix “s”, retorna “true”, si l’usuari introdueix “n”, retorna “false”.
+Des del main() de l’aplicació, crea un objecte Smartphone i crida als mètodes anteriors.
